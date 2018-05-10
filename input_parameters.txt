@@ -1,0 +1,38 @@
+100	20	400	400	144.518	10	80      80000	1550	2700	290	1862	 0.333	 3     0.01	0.003	50	200	0.3	40	280	100000	       1	0.1	     14	        4	   2	     1	       1        1    0
+999	999	999	999	999	999	999     999	999	999	999	999	  999	 999    999	999	999	999	999	999	999	999	      999	999	     999	999	  999	    999	       999	999  999
+P0	rho_0	Pf	Pfill	Vol	s_fill	T_fill Xrating	rhocomp	rhoalum	sigma_y	sigma_cf  Dint	 SF     x0	xpump	step	Pmin	e	n	Tout	fuelec	      fill	fuelcons10   fill0	fill10	iteration   Results  ResultsSC	p-o  Model_fiil
+[bar],	[g/L],	[bar],	[bar],	[Lit],	[J/g-K], [K]   [meters],[g/L],	[g/L],	[MPa],	[MPa],	  [m],	 [-]     [-],	[-]	[s],	[kPa],	[-],	[-],	[K],	[km/kgH2],   [mole],	[mole],	     [mole],	  [mole],  [-],	     [-],	[-],	[-]  [-]
+
+Input parameters:
+         P0 = Initial pressure, (bar)
+      rho_0 = Initial density, (g/L)
+         Pf = Pressure vessel rating, (bar)
+      Pfill = Filling pressure, (bar)
+        Vol = Vessel internal volume, (liters)
+     s_fill = Cryogenic vessel H2 inlet entropy, (J/g-K)
+     T_fill = Cryogenic vessel H2 inlet temperature, (K)
+    Xrating = Remaining range in meters when refueling is done, (meters)
+    rhocomp = Composite density in vessel, (g/L)
+    rhoalum = Aluminum density in vessel, (g/L)
+    sigma_y = Yield stress of aluminum, (Mpa)
+   sigma_cf = Failure stress (T300 carbon fiber/epoxy), (MPA)
+       Dint = Inner Diameter, m
+         SF = Factor of safety against burst, (-) 
+         xo = Initial ortho fraction, (-)
+      xpump = Ortho concentration of pumped H2 (=0.003 for pure para H2, 99.97%)
+       step = Time steps size during the driving (=seconds)
+       Pmin = Mimimum pressure at which hydrogen starts to be extracted at constant pressure, kpa 
+          e = emissivity of 1 layer, (=0.225), 0.6075
+          n = number of layers, (=40)
+       Tout = outside temperature, (=280 K)
+     fuelec = fuel economy, meters per kg H2, (=100000)
+       fill = filled mass step size, mol-g (=2.0 mol)
+ fuelcons10 = Reduced fuelcons close to critical point, (= mol)
+      fill0 = filled mass step size at two phases region, (=mol)
+     fill10 = filled mass step size close to critical point, (= mol)
+  iteration = number of iterations
+    Results = (=1) to write results on file Results.txt
+  ResultsSC = (=1) to write results on screen 
+  paraortho = !=1 to consider p-o or =0 to neglect it
+Model_fill  = != 1 Refueling with constant Cryogenic vessel H2 inlet entropy
+              != 0 Refueling with constant Cryogenic vessel H2 inlet temperature 
