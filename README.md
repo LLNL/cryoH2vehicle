@@ -8,5 +8,6 @@ See [USER MANUAL](https://github.com/LLNL/cryoH2vehicle/blob/master/UserManual.p
 
 # License
 
-The software is released under op
+The software is released under the LLNL LGPG license. For more details see the [LICENSE](https://github.com/LLNL/cryoH2vehicle/blob/master/LICENSE.md/LICENSE.md) file.
 
+LLNL-CODE-750958
